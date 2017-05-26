@@ -1,6 +1,6 @@
 add 2017-5-24  by junl
 
-项目简介：该项目是商户版，跟InsuranceClaimsJunl（用户版）相对应，主要给药店商家订做的一款快捷收款的App
+项目简介：该项目是一个快速开发模板 ，会慢慢将一些独立的提取出来。
 
 项目中所用技术：MVP+RxJava+RecycleView+CardView+Kotlin+Glide+ButterKnife
 
