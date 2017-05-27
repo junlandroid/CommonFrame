@@ -167,6 +167,7 @@ public class Api {
     /**
      * 云端响应头拦截器，用来配置缓存策略
      * Dangerous interceptor that rewrites the server's cache-control header.
+     * 缓存策略参考：http://www.jianshu.com/p/3a8d910cce38
      */
     private final Interceptor mRewriteCacheControlInterceptor = new Interceptor() {
         @Override
