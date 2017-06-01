@@ -3,7 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    >
 
     <!--注意此时 界面导航栏的主标题， 需要在Fragment的静态页面中添加 ， -->
     <android.support.v7.widget.Toolbar
@@ -12,6 +15,7 @@
         android:layout_height="60dp"
         android:background="#FF0082CA"
         android:weightSum="1"
+
         >
 
         <RelativeLayout
@@ -85,9 +89,6 @@
             android:text="港岛妹妹"
             android:drawableTop="@drawable/radiobutton_home_selector"
             android:gravity="center"
-            android:drawablePadding="10dp"
-            android:textSize="20dp"
-
             />
         <RadioButton
             android:id="@+id/rbtn_discovery"
