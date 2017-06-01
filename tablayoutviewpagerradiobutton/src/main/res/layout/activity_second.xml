@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!--注意此时 界面导航栏的主标题， 需要在Fragment的静态页面中添加 ， -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FF0082CA"
+        android:weightSum="1"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#FF0082CA"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:text="港岛妹妹"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        >
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="#b3b3b3"
+        android:id="@+id/view" />
+
+    <!--两种方法的区别
+       @drawable/shouye_p：需要将资源文件放在drawable文件夹中
+       @mipmap/shouye_p：需要将资源文件放在xhdpi文件夹中
+
+       如图片本身已经带了文字，不想设置文字，只想设置图片，可以设置其background属性，控制其边距就可以
+       http://blog.sina.com.cn/s/blog_61e26bcb0100vgko.html
+       自定义标题栏
+       http://blog.csdn.net/g777520/article/details/51395445-->
+
+    <!-- android:background="@android:color/transparent"    选中/非选中的背景图片-->
+    <!--android:textColor="@color/radiobutton_textcolor"    选中/非选中的字体颜色  需要创建一个color文件夹，设置选中/未选中的字体颜色-->
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:minHeight="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/radioGroup"
+        android:layout_marginTop="10dp"
+        >
+
+        <RadioButton
+            android:id="@+id/rbtn_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="港岛妹妹"
+            android:drawableTop="@drawable/radiobutton_home_selector"
+            android:gravity="center"
+            android:drawablePadding="10dp"
+            android:textSize="20dp"
+
+            />
+        <RadioButton
+            android:id="@+id/rbtn_discovery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="天空之城"
+            android:drawableTop="@drawable/radiobutton_discovery_selector"
+            android:gravity="center"
+            />
+        <RadioButton
+            android:id="@+id/rbtn_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="甜蜜的爱情"
+            android:drawableTop="@drawable/radiobutton_info_selector"
+            android:gravity="center"
+            />
+        <RadioButton
+            android:id="@+id/rbtn_mine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="疯狂的撕裂我"
+            android:drawableTop="@drawable/radiobutton_mine_selector"
+            android:gravity="center"
+            />
+    </RadioGroup>
+
+</LinearLayout>

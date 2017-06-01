@@ -1,0 +1,63 @@
+改项目主要目的：
+1、MainActivity中，主菜单4个切换的Button，使用RadioGroup;Fragment使用FrameLayout来装载；
+
+    对于底部按钮，选中与不选中可以有两种视图试下。
+
+    （1）美工切好的图片中带有文字，可以直接drawable属性设置。
+    （2）美工切好的图片，只有图片，没有文字。
+        通过drawableTop/drawableBottom等属性加载图片。
+        通过android:text="港岛妹妹"加载文字，
+        通过android:textColor="@color/radiobutton_textcolor2"属性来设置选中/未选中的文字字体颜色
+        通过android:drawablePadding="10dp"属性设置问题与图片之间的间距
+        通过android:textSize="20dp"属性设置文字字体大小
+
+2、fragment嵌套Viewpager，实现左右侧滑/点击按钮，装载不同的页面，
+
+    布局如下： <RadioGroup
+                 android:id="@+id/radioGroup2"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginRight="20dp"
+                 android:layout_marginTop="10dp"
+                 android:minHeight="35dp"
+                 android:orientation="horizontal">
+
+                 <RadioButton
+                     android:id="@+id/rbtn_safe"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:button="@null"
+                     android:checked="true"
+                     android:gravity="center"
+                     android:text="平安" />
+
+                 <RadioButton
+                     android:id="@+id/rbtn_happy"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:button="@null"
+                     android:gravity="center"
+                     android:text="幸福" />
+                 <RadioButton
+                     android:id="@+id/rbtn_health"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:button="@null"
+                     android:gravity="center"
+                     android:text="健康" />
+             </RadioGroup>
+
+             <android.support.v4.view.ViewPager
+                 android:id="@+id/viewPager"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_gravity="center"
+                 android:layout_weight="1.0"
+                 android:flipInterval="30"
+                 android:layout_margin="5dp"
+                 android:persistentDrawingCache="animation" />
+
